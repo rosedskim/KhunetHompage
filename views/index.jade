@@ -1,0 +1,427 @@
+doctype html
+//if lt IE 7
+  html.no-js.lt-ie9.lt-ie8.lt-ie7(lang='en')
+//if (IE 7)&!(IEMobile)
+  html.no-js.lt-ie9.lt-ie8(lang='en')
+//if (IE 8)&!(IEMobile)
+  html.no-js.lt-ie9(lang='en')
+//if (IE 9)
+  html.no-js.ie9(lang='en')
+// [if gt IE 8] <!
+html(lang='en-US')
+  // <![endif]
+  head
+    // Meta Tags
+    meta(http-equiv='Content-Type', content='text/html; charset=UTF-8')
+    title NET | 정보보호 동아리
+    meta(name='description', content='Insert Your Site Description')
+    // Mobile Specifics
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='HandheldFriendly', content='true')
+    meta(name='MobileOptimized', content='320')
+    // Mobile Internet Explorer ClearType Technology
+    //if IEMobile
+      meta(http-equiv='cleartype', content='on')
+    // Bootstrap
+    link(href='_include/css/bootstrap.min.css', rel='stylesheet')
+    // Main Style
+    link(href='_include/css/main.css', rel='stylesheet')
+    // Supersized
+    link(href='_include/css/supersized.css', rel='stylesheet')
+    link(href='_include/css/supersized.shutter.css', rel='stylesheet')
+    // FancyBox
+    link(href='_include/css/fancybox/jquery.fancybox.css', rel='stylesheet')
+    // Font Icons
+    link(href='_include/css/fonts.css', rel='stylesheet')
+    // Shortcodes
+    link(href='_include/css/shortcodes.css', rel='stylesheet')
+    // Responsive
+    link(href='_include/css/bootstrap-responsive.min.css', rel='stylesheet')
+    link(href='_include/css/responsive.css', rel='stylesheet')
+    // Supersized
+    link(href='_include/css/supersized.css', rel='stylesheet')
+    link(href='_include/css/supersized.shutter.css', rel='stylesheet')
+    // Google Font
+    link(href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900', rel='stylesheet', type='text/css')
+    // Fav Icon
+    link(rel='shortcut icon', href='#')
+    link(rel='apple-touch-icon', href='#')
+    link(rel='apple-touch-icon', sizes='114x114', href='#')
+    link(rel='apple-touch-icon', sizes='72x72', href='#')
+    link(rel='apple-touch-icon', sizes='144x144', href='#')
+    // Modernizr
+    script(src='_include/js/modernizr.js')
+    // Analytics
+    script(type='text/javascript').
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'Insert Your Code']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    // End Analytics
+  body
+    // This section is for Splash Screen
+    .ole
+      section#jSplash
+        #circle
+    // End of Splash Screen
+    // Homepage Slider
+    #home-slider
+      .overlay
+      .slider-text
+        #slidecaption
+      .control-nav
+        a#prevslide.load-item
+          i.font-icon-arrow-simple-left
+        a#nextslide.load-item
+          i.font-icon-arrow-simple-right
+        ul#slide-list
+        a#nextsection(href='#work')
+          i.font-icon-arrow-simple-down
+    // End Homepage Slider
+    // Header
+    header
+      .sticky-nav
+        a#mobile-nav.menu-nav(href='#menu-nav')
+        #logo
+          a#goUp(href='#home-slider', title='Brushed | Responsive One Page Template') Brushed Template
+        nav#menu
+          ul#menu-nav
+            li.current
+              a(href='#home-slider') Home
+            li
+              a(href='#work') Our Work
+            li
+              a(href='#about') About Us
+            li
+              a(href='#contact') Contact
+            li
+              a.external(href='shortcodes.html') Shortcodes
+    // End Header
+    // Our Work Section
+    #work.page
+      .container
+        // Title Page
+        .row
+          .span12
+            .title-page
+              h2.title Our Work
+              h3.title-description
+                | Check Out Our Projects on
+                a(href='#') Dribbble
+                | .
+        // End Title Page
+        // Portfolio Projects
+        .row
+          .span3
+            // Filter
+            nav#options.work-nav
+              ul#filters.option-set(data-option-key='filter')
+                li.type-work Type of Work
+                li
+                  a.selected(href='#filter', data-option-value='*') All Projects
+                li
+                  a(href='#filter', data-option-value='.design') Design
+                li
+                  a(href='#filter', data-option-value='.photography') Photography
+                li
+                  a(href='#filter', data-option-value='.video') Video
+            // End Filter
+          .span9
+            .row
+              section#projects
+                ul#thumbs
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.design
+                    // Fancybox - Gallery Enabled - Title - Full Image
+                    a.hover-wrap.fancybox(data-fancybox-group='gallery', title='The City', href='_include/img/work/full/image-01-full.jpg')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-01.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.')
+                  // End Item Project
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.design
+                    // Fancybox - Gallery Enabled - Title - Full Image
+                    a.hover-wrap.fancybox(data-fancybox-group='gallery', title='The Office', href='_include/img/work/full/image-02-full.jpg')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-02.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.')
+                  // End Item Project
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.photography
+                    // Fancybox - Gallery Enabled - Title - Full Image
+                    a.hover-wrap.fancybox(data-fancybox-group='gallery', title='The Mountains', href='_include/img/work/full/image-03-full.jpg')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-03.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.')
+                  // End Item Project
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.video
+                    // Fancybox Media - Gallery Enabled - Title - Link to Video
+                    a.hover-wrap.fancybox-media(data-fancybox-group='video', title='Video Content From Vimeo', href='http://vimeo.com/51460511')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-08.jpg', alt='Video')
+                  // End Item Project
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.photography
+                    // Fancybox - Gallery Enabled - Title - Full Image
+                    a.hover-wrap.fancybox(data-fancybox-group='gallery', title='The Sea', href='_include/img/work/full/image-04-full.jpg')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-04.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.')
+                  // End Item Project
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.photography
+                    // Fancybox - Gallery Enabled - Title - Full Image
+                    a.hover-wrap.fancybox(data-fancybox-group='gallery', title='Clouds', href='_include/img/work/full/image-05-full.jpg')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-05.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.')
+                  // End Item Project
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.video
+                    // Fancybox Media - Gallery Enabled - Title - Link to Video
+                    a.hover-wrap.fancybox-media(data-fancybox-group='video', title='Video Content From Vimeo', href='http://vimeo.com/50834315')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-09.jpg', alt='Video')
+                  // End Item Project
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.design
+                    // Fancybox - Gallery Enabled - Title - Full Image
+                    a.hover-wrap.fancybox(data-fancybox-group='gallery', title='The Dark', href='_include/img/work/full/image-06-full.jpg')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-06.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.')
+                  // End Item Project
+                  // Item Project and Filter Name
+                  li.item-thumbs.span3.design
+                    // Fancybox - Gallery Enabled - Title - Full Image
+                    a.hover-wrap.fancybox(data-fancybox-group='gallery', title='The Beach', href='_include/img/work/full/image-07-full.jpg')
+                      span.overlay-img
+                      span.overlay-img-thumb.font-icon-plus
+                    // Thumb Image and Description
+                    img(src='_include/img/work/thumbs/image-07.jpg', alt='Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus quis elementum odio. Curabitur pellentesque, dolor vel pharetra mollis.')
+                  // End Item Project
+        // End Portfolio Projects
+    // End Our Work Section
+    // About Section
+    #about.page-alternate
+      .container
+        // Title Page
+        .row
+          .span12
+            .title-page
+              h2.title About Us
+              h3.title-description Learn About our Team & Culture.
+        // End Title Page
+        // People
+        .row
+          // Start Profile
+          .span4.profile
+            .image-wrap
+              .hover-wrap
+                span.overlay-img
+                span.overlay-text-thumb CTO/Founder
+              img(src='_include/img/profile/profile-01.jpg', alt='John Doe')
+            h3.profile-name John Doe
+            p.profile-description
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat
+              a(href='#') hendrerit dictum
+              | .
+              |             Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            .social
+              ul.social-icons
+                li
+                  a(href='#')
+                    i.font-icon-social-twitter
+                li
+                  a(href='#')
+                    i.font-icon-social-dribbble
+                li
+                  a(href='#')
+                    i.font-icon-social-facebook
+          // End Profile
+          // Start Profile
+          .span4.profile
+            .image-wrap
+              .hover-wrap
+                span.overlay-img
+                span.overlay-text-thumb Creative Director
+              img(src='_include/img/profile/profile-02.jpg', alt='Jane Helf')
+            h3.profile-name Jane Helf
+            p.profile-description
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat
+              a(href='#') hendrerit dictum
+              | .
+              |             Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            .social
+              ul.social-icons
+                li
+                  a(href='#')
+                    i.font-icon-social-twitter
+                li
+                  a(href='#')
+                    i.font-icon-social-email
+          // End Profile
+          // Start Profile
+          .span4.profile
+            .image-wrap
+              .hover-wrap
+                span.overlay-img
+                span.overlay-text-thumb Lead Designer
+              img(src='_include/img/profile/profile-03.jpg', alt='Joshua Insanus')
+            h3.profile-name Joshua Insanus
+            p.profile-description
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat
+              a(href='#') hendrerit dictum
+              | .
+              |             Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+            .social
+              ul.social-icons
+                li
+                  a(href='#')
+                    i.font-icon-social-twitter
+                li
+                  a(href='#')
+                    i.font-icon-social-linkedin
+                li
+                  a(href='#')
+                    i.font-icon-social-google-plus
+                li
+                  a(href='#')
+                    i.font-icon-social-vimeo
+          // End Profile
+        // End People
+    // End About Section
+    // Contact Section
+    #contact.page
+      .container
+        // Title Page
+        .row
+          .span12
+            .title-page
+              h2.title Get in Touch
+              h3.title-description We’re currently accepting new client projects. We look forward to serving you.
+        // End Title Page
+        // Contact Form
+        .row
+          .span9
+            form#contact-form.contact-form(action='#')
+              p.contact-name
+                input#contact_name(type='text', placeholder='Full Name', value='', name='name')
+              p.contact-email
+                input#contact_email(type='text', placeholder='Email Address', value='', name='email')
+              p.contact-message
+                textarea#contact_message(placeholder='Your Message', name='message', rows='15', cols='40')
+              p.contact-submit
+                a#contact-submit.submit(href='#') Send Your Email
+              #response
+          .span3
+            .contact-details
+              h3 Contact Details
+              ul
+                li
+                  a(href='#') hello@brushed.com
+                li (916) 375-2525
+                li
+                  | Brushed Studio
+                  br
+                  |                         5240 Vanish Island. 105
+                  br
+                  |                         Unknow
+        // End Contact Form
+    // End Contact Section
+    // Twitter Feed
+    #twitter-feed.page-alternate
+      .container
+        .row
+          .span12
+            .follow
+              a(href='https://twitter.com/Bluxart', title='Follow Me on Twitter', target='_blank')
+                i.font-icon-social-twitter
+            #ticker.query
+    // End Twitter Feed
+    // Socialize
+    #social-area.page
+      .container
+        .row
+          .span12
+            nav#social
+              ul
+                li
+                  a(href='https://twitter.com/Bluxart', title='Follow Me on Twitter', target='_blank')
+                    span.font-icon-social-twitter
+                li
+                  a(href='http://dribbble.com/Bluxart', title='Follow Me on Dribbble', target='_blank')
+                    span.font-icon-social-dribbble
+                li
+                  a(href='http://forrst.com/people/Bluxart', title='Follow Me on Forrst', target='_blank')
+                    span.font-icon-social-forrst
+                li
+                  a(href='http://www.behance.net/alessioatzeni', title='Follow Me on Behance', target='_blank')
+                    span.font-icon-social-behance
+                li
+                  a(href='https://www.facebook.com/Bluxart', title='Follow Me on Facebook', target='_blank')
+                    span.font-icon-social-facebook
+                li
+                  a(href='https://plus.google.com/105500420878314068694', title='Follow Me on Google Plus', target='_blank')
+                    span.font-icon-social-google-plus
+                li
+                  a(href='http://www.linkedin.com/in/alessioatzeni', title='Follow Me on LinkedIn', target='_blank')
+                    span.font-icon-social-linkedin
+                li
+                  a(href='http://themeforest.net/user/Bluxart', title='Follow Me on ThemeForest', target='_blank')
+                    span.font-icon-social-envato
+                li
+                  a(href='http://zerply.com/Bluxart/public', title='Follow Me on Zerply', target='_blank')
+                    span.font-icon-social-zerply
+    // End Socialize
+    // Footer
+    footer
+      p.credits
+        | ©2013 Brushed.
+        a(href='http://themes.alessioatzeni.com/html/brushed/', title='Brushed | Responsive One Page Template') Brushed Template
+        |  by
+        a(href='http://www.alessioatzeni.com/', title='Alessio Atzeni | Web Designer & Front-end Developer') Alessio Atzeni
+    // End Footer
+    // Back To Top
+    a#back-to-top(href='#')
+      i.font-icon-arrow-simple-up
+    // End Back to Top
+    // Js
+    script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    // jQuery Core
+    script(src='_include/js/bootstrap.min.js')
+    // Bootstrap
+    script(src='_include/js/supersized.3.2.7.min.js')
+    // Slider
+    script(src='_include/js/waypoints.js')
+    // WayPoints
+    script(src='_include/js/waypoints-sticky.js')
+    // Waypoints for Header
+    script(src='_include/js/jquery.isotope.js')
+    // Isotope Filter
+    script(src='_include/js/jquery.fancybox.pack.js')
+    // Fancybox
+    script(src='_include/js/jquery.fancybox-media.js')
+    // Fancybox for Media
+    script(src='_include/js/jquery.tweet.js')
+    // Tweet
+    script(src='_include/js/plugins.js')
+    // Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi
+    script(src='_include/js/main.js')
+    // Default JS
+    // End Js
